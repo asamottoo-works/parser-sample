@@ -104,14 +104,6 @@ public class Person {
 		this.weight = weight;
 	}
 
-	public static long getIncrement() {
-		return increment;
-	}
-
-	public static void setIncrement(long increment) {
-		Person.increment = increment;
-	}
-
 	@Override
 	public String toString() {
 		return "Person{" +
