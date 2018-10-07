@@ -17,8 +17,6 @@ public class CSVTools {
 		try(CsvAnnotationBeanWriter<T> csvWriter = new CsvAnnotationBeanWriter<>(
 				type, writer, CsvPreference.STANDARD_PREFERENCE)){
 
-
-			// ヘッダー行の書き込み
 			csvWriter.writeHeader();
 
 			beans.forEach(item -> {
@@ -43,7 +41,6 @@ public class CSVTools {
 		try(CsvAnnotationBeanReader<T> csvReader = new CsvAnnotationBeanReader<>(
 				type, new BufferedReader(new StringReader(csv)), CsvPreference.STANDARD_PREFERENCE)) {
 
-			// ヘッダー行の読み込み
 			csvReader.getHeader(true);
 
 			T record = null;
